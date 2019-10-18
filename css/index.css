@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Questrial&display=swap");
+:root {
+  --main-color: black;
+  font-family: "Questrial", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 980px;
+  margin: auto;
+}
+h1,
+h2,
+h3,
+h4.h5.h6,
+header,
+nav,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.top-header .logo {
+  font-family: "Abril Fatface", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.top-header .top-menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  flex: 1;
+}
+
+.top-header .top-menu li {
+  list-style-type: none;
+}
+
+.top-header .top-menu li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 2px;
+  color: var(--main-color);
+}
+.top-header .top-menu li a:hover {
+  border: 1px solid var(--main-color);
+}
+@media (min-width: 600px) {
+  .top-header nav {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 600px) {
+  .top-header .jumbotron {
+    min-height: 600px;
+  }
+}
+
+.top-header .jumbotron {
+  background-image: url(../img/main-photo.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.top-header .jumbotron h1 {
+  font-size: 3rem;
+  color: white;
+}
+.jumbotron .button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin-top: 20px;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: transparent;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.product-list .product-card {
+  border: 1px solid var(--main-color);
+  padding: 2px;
+}
+.product-list .product-card img {
+  width: 100%;
+  display: block;
+}
+.product-list .product-card .button-container {
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 640px) {
+  .product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2px;
+  }
+}
+@media (min-width: 960px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 980px) {
+  .product-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
